@@ -1,0 +1,118 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.clock-container {
+  position: relative;
+  width: 40%;
+  overflow: hidden;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 100%;
+}
+
+.clock-container::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.clock-content {
+  position: absolute;
+  background-image: url("./assets/clock.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: fill;
+  border-radius: 100%
+}
+
+.background-numbers {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  z-index: 1;
+}
+
+.hand {
+  border-radius: 10px;
+  transform-origin: bottom;
+  outline: 1px solid transparent;
+  position: absolute;
+  bottom: 50%;
+}
+
+.seconds-hand {
+  width: 0.5%;
+  height: 37.5%;
+  background-color: #dfc48c;
+  z-index: 3;
+}
+
+.minutes-hand {
+  width: 1%;
+  height: 30%;
+  z-index: 2;
+  background-color: #cd6a51;
+}
+
+.hours-hand {
+  width: 1.5%;
+  height: 22.5%;
+  z-index: 1;
+  background-color: #8f9c6c;
+}
+
+.indicator-cover {
+  position: absolute;
+  bottom: 48.5%;
+  border-radius: 50%;
+  width: 3%;
+  height: 3%;
+  background-color: #303030;
+  z-index: 5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
